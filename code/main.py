@@ -7,17 +7,16 @@ for i in range(1,nop+1):
     lvl=int(input("enter number for level/experince of player(beginner(1),intermidiate(2),professional(3)): "))
     data[ply]=lvl
 sorted_data=dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
-name=list(sorted_data)
-def seed_positions(num_slots):
-    positions = [1]
-    while len(positions) < num_slots:
-        positions = [x for pair in positions for x in (pair, num_slots + 1 - pair)]    
-    return positions
-seeded_slots = seed_positions(num_slots)
-slots=[]        
-for seed in seeded_slots:       
-    if seed <= len(name):
-        slots.append(name[seed])
+seed=list(sorted_data)
+name={i + 1: player for i, player in enumerate(seed)}
+slot=[] 
+brackets=[]       
+for i in range(1,math.ceil(len(name)/2)+1):
+    val=(len(name)+1)- i
+    brackets.extend((name[i],name[val]))
+unique_slots = list(dict.fromkeys(brackets))
+for i in range(0, len(unique_slots), 2):
+    if i+1<len(unique_slots):
+        slot.append((unique_slots[i], unique_slots[i+1]))
     else:
-        slots.append(None)
-print(slots)
+        slot.append((unique_slots[i], None))        
