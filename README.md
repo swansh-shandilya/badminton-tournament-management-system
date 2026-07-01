@@ -35,8 +35,8 @@ The project is being developed from scratch as a learning experience in algorith
 | Project Setup         |  Completed    |
 | Player Data Handling  |  Completed    |
 | Player Ranking        |  Completed    |
-| Seeding Algorithm     |  In Progress |
-| Bye Allocation        |  Planned      |
+| Seeding Algorithm     |  completed |
+| Bye Allocation        |  in progress      |
 | Fixture Generation    |  Planned      |
 | Match Management      |  Planned      |
 | Tournament Statistics |  Planned      |
