@@ -36,11 +36,14 @@ The project is being developed from scratch as a learning experience in algorith
 | Player Data Handling  |  Completed    |
 | Player Ranking        |  Completed    |
 | Seeding Algorithm     |  completed |
-| Bye Allocation        |  in progress      |
-| Fixture Generation    |  Planned      |
-| Match Management      |  Planned      |
-| Tournament Statistics |  Planned      |
-
+| Bye Allocation        |  completed      |
+| Fixture Generation    |  completed      |
+| Match Management      |  completed     |
+| Tournament Statistics |  completed      |
+In Progress
+- [ ] Improve console interface and output formatting
+- [ ] Add code documentation and comments
+- [ ] Optimize and refactor existing logic
 ---
 
 ##  Technologies Used
@@ -89,7 +92,7 @@ This project is helping me improve my understanding of:
 
 ##  Contributions
 
-This project is currently under active development by the author. Suggestions, ideas, and constructive feedback are always welcome.
+This project is currently under active development by the author(swansh shandilya). Suggestions, ideas, and constructive feedback are always welcome.
 
 ---
 
