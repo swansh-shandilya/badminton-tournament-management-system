@@ -1,3 +1,4 @@
+# refactor file 
 import math
 def input_players():
     total_players = int(input("Enter the total number of players: "))
