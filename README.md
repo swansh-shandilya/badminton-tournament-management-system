@@ -43,9 +43,9 @@ The project is being developed from scratch as a learning experience in algorith
 
 
 In Progress
-- [ ] Improve console interface and output formatting
-- [ ] Add code documentation and comments
-- [ ] Optimize and refactor existing logic
+* Improve console interface and output formatting
+* Add code documentation and comments
+* Optimize and refactor existing logic
 ---
 
 ##  Technologies Used
