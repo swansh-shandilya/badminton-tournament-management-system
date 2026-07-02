@@ -40,6 +40,8 @@ The project is being developed from scratch as a learning experience in algorith
 | Fixture Generation    |  completed      |
 | Match Management      |  completed     |
 | Tournament Statistics |  completed      |
+
+
 In Progress
 - [ ] Improve console interface and output formatting
 - [ ] Add code documentation and comments
