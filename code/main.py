@@ -230,6 +230,14 @@ def main():
             Round += 1
             if len(alive_players) == 1:
                 print("\nTournament Champion:", alive_players[0])
+                seed.clear()
+                num_slots =0
+                total_players =0
+                bye.clear()
+                match.clear()
+                winners.clear()
+                alive_players.clear()
+                Round = 1
                 input("\nPress Enter to continue...")    
 
 
