@@ -21,7 +21,7 @@ def register_player():
     num_slots = 2 ** math.ceil(math.log2(total_players))
     sorted_data=dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
     seed=list(sorted_data)
-    return seed, num_slots,total_players
+    return seed, num_slots, total_players, data
 def generate_fixtures(num_slots, total_players, seed, winners, bye,alive_players):
     heading("GENERATE FIXTURES")
     pairs=[]
@@ -152,13 +152,47 @@ def menu():
     print("4. View Fixtures for Round {}".format(Round))
     print("5. Enter Match Result")
     print("6. Next Round")
+    print("7. Edit player")
     print("0. Exit")
 
     print()
 
     choice = input("Enter your choice: ")
 
-    return choice                    
+    return choice
+def Edit_Player(seed,data):
+    heading("EDIT PLAYER")
+    print()
+    print("1.Change player name ") 
+    print("2.Change experience level")
+    print("3.BACK") 
+    print()
+    choice=input("Enter your choice: ")
+    if choice=="1":
+        while True:
+            nam=input("Enter the name you want to change(wrong name to be entered): ")
+            if nam in data :
+                corrected_name=input("enter corrected name: ")
+                data[corrected_name]=data.pop(nam)
+                sorted_data=dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
+                seed=list(sorted_data)
+                break
+            else:
+                print("player not found!")
+    elif choice=="2":
+        while True:
+            na=input("enter the name of the player: ")
+            if na in data:
+                new_lvl=int(input("Experience(1-3) : "))
+                data[na]=new_lvl
+                sorted_data=dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
+                seed=list(sorted_data)
+                break
+            else:
+                print("player not found!") 
+    elif choice=="3":
+        input("Press enter to return back to menu....")
+    return seed                  
 def main():
 
     global Round
@@ -178,7 +212,7 @@ def main():
 
         if choice == "1":
 
-            seed, num_slots, total_players = register_player()
+            seed, num_slots, total_players, data = register_player()
 
 
         elif choice == "2":
@@ -227,7 +261,7 @@ def main():
                     alive_players,
                     bye
                 )
-            Round += 1
+                Round += 1
             if len(alive_players) == 1:
                 print("\nTournament Champion:", alive_players[0])
                 seed.clear()
@@ -260,7 +294,12 @@ def main():
                     bye,
                     alive_players
                 )
-
+        elif choice=="7":
+            if Round>1:
+                print("\nTournament has started cannot make changes now ")
+                input("\nPress Enter to return to the Main Menu...")
+            else:
+                seed=Edit_Player(seed,data)
 
         elif choice == "0":
 
