@@ -14,6 +14,18 @@ The project is being developed from scratch as a learning experience in algorith
 
 ---
 
+## Current Features
+- Player registration
+- Experience-based seeding
+- Swiss-style fixture generation
+- Match result entry
+- Leaderboard generation
+- Edit player name
+- Edit player experience
+- Tournament progress tracking
+
+---
+
 ##  Planned Features
 
 *  Player Registration
