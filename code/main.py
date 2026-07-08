@@ -153,6 +153,7 @@ def menu():
     print("5. Enter Match Result")
     print("6. Next Round")
     print("7. Edit player")
+    print("8. Delete player")
     print("0. Exit")
 
     print()
@@ -192,7 +193,26 @@ def Edit_Player(seed,data):
                 print("player not found!") 
     elif choice=="3":
         input("Press enter to return back to menu....")
-    return seed                  
+    return seed 
+def delete_player(seed,data,total_players):
+    heading("DELETE PLAYER")
+    print()
+    choice=input("Enter the name of the player to be deleted: ")
+    while True:
+        if choice in data:
+            print("Player found")
+            input("Press enter to delete player")
+            del data[choice]
+            print("Player deleted")
+            sorted_data=dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
+            seed=list(sorted_data)
+            num_slots = 2 ** math.ceil(math.log2(len(seed)))
+            total_players-=1
+            input("Press enter to return to the menu....")
+            break
+        else:
+            print("Player not found")
+    return seed,num_slots,total_players
 def main():
 
     global Round
@@ -299,8 +319,20 @@ def main():
                 print("\nTournament has started cannot make changes now ")
                 input("\nPress Enter to return to the Main Menu...")
             else:
-                seed=Edit_Player(seed,data)
-
+                seed=Edit_Player(
+                    seed,
+                    data
+                )
+        elif choice=="8":
+            if Round>1:
+                print("\nTournament has started cannot make changes now ")
+                input("\nPress Enter to return to the Main Menu...")
+            else:
+                seed,num_slots,total_players=delete_player(
+                    seed,
+                    data,
+                    total_players
+                )    
         elif choice == "0":
 
             print("\nThank you for using the Tournament Manager!")
