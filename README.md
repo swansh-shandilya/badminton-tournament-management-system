@@ -28,18 +28,18 @@ The project is being developed from scratch as a learning experience in algorith
 
 ---
 
-##  Planned Features
+## Future Development
 
-*  Player Registration
-*  Player Ranking & Seeding
-*  Automatic Bye Allocation
-*  Single Elimination Fixture Generation
-*  Match Result Management
-*  Automatic Next Round Generation
-*  Tournament Winner Determination
-*  Tournament Statistics
-*  Fixture Export *(Planned)*
+This project is planned to evolve into a larger capstone project.
 
+Planned improvements include:
+
+- Backend with FastAPI
+- SQLite/PostgreSQL database
+- User authentication
+- AI-assisted tournament analytics
+- Machine Learning features
+- Robotics integration (research phase)
 ---
 
 ##  Development Progress
