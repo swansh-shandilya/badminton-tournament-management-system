@@ -1,8 +1,7 @@
 # Badminton Tournament Management System
 ### A Software Engineering Project
 
-A Python-based application for organizing and managing badminton tournaments efficiently. The project focuses on automating tournament operations such as player seeding, fixture generation, bye allocation, match progression, and result management.
-
+Software engineering project featuring automated tournament management, bracket generation, player management, and match progression.
 > **Status:** Version 1.0 Complete
 
 The current version focuses on the frontend tournament management workflow and demonstrates the complete tournament lifecycle from player registration to champion declaration.
